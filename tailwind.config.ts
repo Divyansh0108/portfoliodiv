@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                // Custom colors for portfolio
+                darkPurple: '#1A1F2C',
+                magenta: '#D946EF',
+                violet: '#8B5CF6',
+                golden: '#F97316',
+                secondaryPurple: '#7E69AB',
+                lightPurple: '#D6BCFA',
+                softPurple: '#E5DEFF',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
