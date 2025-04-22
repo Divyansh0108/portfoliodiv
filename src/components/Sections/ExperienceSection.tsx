@@ -1,5 +1,5 @@
-
 import { useState, useEffect } from "react";
+import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 
 type Experience = {
   id: number;
@@ -15,7 +15,7 @@ type Experience = {
 
 const ExperienceSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -49,7 +49,7 @@ const ExperienceSection = () => {
         "Led a team of 4 data scientists to develop a real-time anomaly detection system for financial fraud prevention",
         "Collaborated with product teams to integrate AI capabilities into existing products"
       ],
-      logo: "https://via.placeholder.com/100x100.png?text=TechAI"
+      logo: "" // removed use of logo later
     },
     {
       id: 2,
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
         "Developed an automated data preprocessing pipeline that reduced data preparation time by 40%",
         "Created interactive dashboards using Tableau and D3.js for real-time business metrics visualization"
       ],
-      logo: "https://via.placeholder.com/100x100.png?text=DataViz"
+      logo: ""
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ const ExperienceSection = () => {
         "Implemented and evaluated various deep learning models for image classification tasks",
         "Collaborated with cross-functional teams to apply research findings to real-world problems"
       ],
-      logo: "https://via.placeholder.com/100x100.png?text=AILab"
+      logo: ""
     },
     {
       id: 4,
@@ -94,34 +94,7 @@ const ExperienceSection = () => {
         "Developed predictive models for customer segmentation using clustering algorithms",
         "Presented findings and insights to stakeholders through visualizations and reports"
       ],
-      logo: "https://via.placeholder.com/100x100.png?text=Intern"
-    }
-  ];
-
-  // Quotes/content for the alternating sides
-  const sideContent = [
-    {
-      type: "quote",
-      content: "Data is the new oil. It's valuable, but if unrefined it cannot really be used.",
-      author: "Clive Humby"
-    },
-    {
-      type: "image",
-      url: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      alt: "Data visualization"
-    },
-    {
-      type: "quote",
-      content: "Machine learning is the science of getting computers to act without being explicitly programmed.",
-      author: "Stanford University"
-    },
-    {
-      type: "stats",
-      items: [
-        { value: "92%", label: "Problem-Solving Rate" },
-        { value: "3+", label: "Papers Published" },
-        { value: "15+", label: "Projects Completed" }
-      ]
+      logo: ""
     }
   ];
 
@@ -132,7 +105,6 @@ const ExperienceSection = () => {
         <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-violet/10 filter blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-magenta/10 filter blur-3xl"></div>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -143,11 +115,9 @@ const ExperienceSection = () => {
             My professional journey in the world of data science and AI
           </p>
         </div>
-        
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-1 bg-gradient-to-b from-magenta via-violet to-golden hidden md:block"></div>
-          
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div 
@@ -156,7 +126,7 @@ const ExperienceSection = () => {
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}
               >
-                {/* Content side */}
+                {/* Content side (main card, now full width on mobile and desktop) */}
                 <div 
                   className={`w-full md:w-5/12 ${
                     isVisible 
@@ -166,37 +136,35 @@ const ExperienceSection = () => {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="glass-card p-6 rounded-xl hover-glow">
-                    <div className="flex items-start mb-4">
-                      <img 
-                        src={exp.logo} 
-                        alt={exp.company} 
-                        className="w-12 h-12 rounded-lg object-cover mr-4"
-                      />
-                      <div>
-                        <h3 className="text-xl font-semibold">{exp.position}</h3>
-                        <p className="text-white/80">{exp.company}</p>
-                      </div>
+                    <div className="mb-4">
+                      <h3 className="text-xl font-semibold">{exp.position}</h3>
+                      <p className="text-white/80">{exp.company}</p>
                     </div>
-                    
                     <div className="flex items-center mb-2 text-sm">
                       <span className="text-white/60 mr-4">{exp.period}</span>
                       <span className="text-white/60">{exp.location}</span>
                     </div>
-                    
                     <div className="mb-3">
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                        exp.mode === 'Remote' 
-                          ? 'bg-green-500/20 text-green-300' 
-                          : exp.mode === 'Hybrid'
-                            ? 'bg-blue-500/20 text-blue-300'
-                            : 'bg-orange-500/20 text-orange-300'
-                      }`}>
-                        {exp.mode}
-                      </span>
+                      <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium cursor-default ${
+                                exp.mode === 'Remote' 
+                                  ? 'bg-green-500/20 text-green-300' 
+                                  : exp.mode === 'Hybrid'
+                                    ? 'bg-blue-500/20 text-blue-300'
+                                    : 'bg-orange-500/20 text-orange-300'
+                              }`}>
+                                {exp.mode}
+                              </span>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              {exp.mode} role
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                     </div>
-                    
                     <p className="text-white/70 mb-4">{exp.description}</p>
-                    
                     <h4 className="text-sm font-semibold mb-2 text-white/90">Key Responsibilities:</h4>
                     <ul className="space-y-2">
                       {exp.responsibilities.map((resp, i) => (
@@ -208,57 +176,20 @@ const ExperienceSection = () => {
                     </ul>
                   </div>
                 </div>
-                
                 {/* Timeline dot for mobile */}
                 <div className="my-4 md:hidden w-4 h-4 rounded-full bg-gradient-to-r from-magenta to-violet"></div>
-                
                 {/* Timeline element for desktop */}
                 <div className="hidden md:flex w-2/12 justify-center items-center">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-magenta to-violet flex items-center justify-center">
                     <div className="w-3 h-3 rounded-full bg-white"></div>
                   </div>
                 </div>
-                
-                {/* Alternate side content */}
+                {/* Alternate side content removed */}
                 <div 
-                  className={`w-full md:w-5/12 mt-4 md:mt-0 ${
-                    isVisible 
-                      ? 'opacity-100 translate-y-0' 
-                      : 'opacity-0 translate-y-10'
-                  } transition-all duration-700`}
+                  className={`w-full md:w-5/12 mt-4 md:mt-0 transition-all duration-700`}
                   style={{ transitionDelay: `${index * 200 + 100}ms` }}
                 >
-                  <div className="glass-card p-6 rounded-xl hover-glow h-full flex items-center justify-center">
-                    {sideContent[index % sideContent.length].type === 'quote' ? (
-                      <div className="text-center">
-                        <p className="text-lg italic text-white/80 mb-4">
-                          {sideContent[index % sideContent.length].content}
-                        </p>
-                        <p className="text-sm text-white/60">
-                          — {(sideContent[index % sideContent.length] as any).author}
-                        </p>
-                      </div>
-                    ) : sideContent[index % sideContent.length].type === 'image' ? (
-                      <div className="w-full">
-                        <img 
-                          src={(sideContent[index % sideContent.length] as any).url} 
-                          alt={(sideContent[index % sideContent.length] as any).alt}
-                          className="w-full h-auto rounded-lg"
-                        />
-                      </div>
-                    ) : (
-                      <div className="grid grid-cols-3 gap-4 w-full">
-                        {(sideContent[index % sideContent.length] as any).items.map((item: any, i: number) => (
-                          <div key={i} className="text-center">
-                            <p className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet">
-                              {item.value}
-                            </p>
-                            <p className="text-sm text-white/70">{item.label}</p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  {/* Empty for now; alternate side panels removed as per instructions */}
                 </div>
               </div>
             ))}
@@ -268,5 +199,4 @@ const ExperienceSection = () => {
     </section>
   );
 };
-
 export default ExperienceSection;
