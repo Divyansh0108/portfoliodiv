@@ -3,25 +3,27 @@ import { Award, ArrowUpRight } from "lucide-react";
 
 const awards = [
   {
-    title: "Winner",
-    competition: "Smart India Hackathon 2023",
-    organization: "Government of India",
-    date: "2023",
-    link: "https://sih.gov.in/sih2023PS",
+    title: "Dean's List of All Round Excellence",
+    competition: "Manipal University Jaipur",
+    organization: "Manipul University Jaipur",
+    date: "April 2025",
+    description: "In recognition of off-campus achievements and overall excellence.",
+    link: "https://shorturl.at/i3OXr",
+  },
+  {
+    title: "Dean's List Excellence in Academics",
+    competition: "Manipal University Jaipur",
+    organization: "Manipul University Jaipur",
+    date: "April 2024",
+    description: "Awarded for securing the highest Grade Point Average in Computer Science and Engineering (AIML).",
+    link: "https://shorturl.at/EBLh7",
   },
   {
     title: "Runner Up",
     competition: "Xiaomi Ode2Code 3.0",
     organization: "Xiaomi India",
     date: "2023",
-    link: "https://ode2code.in/",
-  },
-  {
-    title: "Top 100 Finalist",
-    competition: "ASEAN India Hackathon",
-    organization: "Ministry of Education",
-    date: "2023",
-    link: "https://www.aicte-india.org/Asean2023/index.php",
+    description: "",
   },
 ];
 
@@ -43,26 +45,45 @@ const AwardsSection = () => {
             >
               <div className="flex justify-between items-start mb-4">
                 <Award className="w-8 h-8 text-golden" />
-                <a 
-                  href={award.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="cursor-pointer"
-                >
-                  <ArrowUpRight className="w-6 h-6 text-magenta group-hover:text-golden transition-colors duration-300" />
-                </a>
+                {award.link && (
+                  <a 
+                    href={award.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    <ArrowUpRight className="w-6 h-6 text-magenta group-hover:text-golden transition-colors duration-300" />
+                  </a>
+                )}
               </div>
-              <a 
-                href={award.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <h3 className="text-xl font-semibold text-golden mb-2">{award.title}</h3>
-                <p className="text-white/90 font-medium">{award.competition}</p>
-                <p className="text-white/70 text-sm mt-1">{award.organization}</p>
-                <p className="text-white/50 text-sm mt-2">{award.date}</p>
-              </a>
+              <div className={award.link ? 'cursor-pointer' : ''}>
+                {award.link ? (
+                  <a 
+                    href={award.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <h3 className="text-xl font-semibold text-golden mb-2">{award.title}</h3>
+                    <p className="text-white/90 font-medium">{award.competition}</p>
+                    <p className="text-white/70 text-sm mt-1">{award.organization}</p>
+                    <p className="text-white/50 text-sm mt-2">{award.date}</p>
+                    {award.description && (
+                      <p className="text-white/70 text-sm mt-3 italic">{award.description}</p>
+                    )}
+                  </a>
+                ) : (
+                  <>
+                    <h3 className="text-xl font-semibold text-golden mb-2">{award.title}</h3>
+                    <p className="text-white/90 font-medium">{award.competition}</p>
+                    <p className="text-white/70 text-sm mt-1">{award.organization}</p>
+                    <p className="text-white/50 text-sm mt-2">{award.date}</p>
+                    {award.description && (
+                      <p className="text-white/70 text-sm mt-3 italic">{award.description}</p>
+                    )}
+                  </>
+                )}
+              </div>
             </div>
           ))}
         </div>
