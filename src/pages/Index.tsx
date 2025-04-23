@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
@@ -9,6 +8,7 @@ import ProjectsSection from "../components/Sections/ProjectsSection";
 import ExperienceSection from "../components/Sections/ExperienceSection";
 import EducationSection from "../components/Sections/EducationSection";
 import ContactSection from "../components/Sections/ContactSection";
+import AwardsSection from "../components/Sections/AwardsSection";
 import { ArrowUp } from "lucide-react";
 import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from "../components/ui/tooltip";
 
@@ -76,6 +76,7 @@ const Index = () => {
         <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
+        <AwardsSection />
         <ContactSection />
       </main>
 

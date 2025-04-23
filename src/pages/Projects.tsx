@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
@@ -14,6 +15,7 @@ type Project = {
   technologies: string[];
   demoUrl: string;
   githubUrl: string;
+  hasDemoLink?: boolean;
 };
 
 const Projects = () => {
@@ -35,6 +37,7 @@ const Projects = () => {
       technologies: ["Python", "TensorFlow", "Streamlit", "Gemini Flash 1.5", "Matplotlib", "LIME", "scikit-learn"],
       demoUrl: "https://mentalhealth-01.streamlit.app/",
       githubUrl: "https://github.com/Divyansh0108/MentalHealth",
+      hasDemoLink: true,
     },
     {
       id: 2,
@@ -46,6 +49,7 @@ const Projects = () => {
       technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Plotly", "Machine Learning", "Data Cleaning", "Feature Engineering"],
       demoUrl: "https://dataviztoolkit.streamlit.app/",
       githubUrl: "https://github.com/Divyansh0108/DataAnalysisToolkit",
+      hasDemoLink: true,
     },
     {
       id: 3,
@@ -57,6 +61,7 @@ const Projects = () => {
       technologies: ["Python", "NLP", "Transformers", "Flask", "React"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/E2E-text-summarization",
+      hasDemoLink: false,
     },
     {
       id: 4,
@@ -68,6 +73,7 @@ const Projects = () => {
       technologies: ["Python", "Security", "Monitoring"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/networkSecurity",
+      hasDemoLink: false,
     },
     {
       id: 5,
@@ -79,6 +85,7 @@ const Projects = () => {
       technologies: ["Python", "ML", "Finance"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/Credit-Risk-Analysis",
+      hasDemoLink: false,
     },
     {
       id: 6,
@@ -90,6 +97,7 @@ const Projects = () => {
       technologies: ["Python", "Django", "Web"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/Note-Taking-Python-Web-Tech",
+      hasDemoLink: false,
     },
     {
       id: 7,
@@ -101,6 +109,7 @@ const Projects = () => {
       technologies: ["Python", "scikit-learn", "Healthcare"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/heart-disease-pred",
+      hasDemoLink: false,
     },
   ];
 
@@ -177,7 +186,7 @@ const Projects = () => {
                   
                   <div className="flex justify-between items-center">
                     <div className="flex space-x-2">
-                      {project.demoUrl !== "#" && (
+                      {project.hasDemoLink && (
                         <a 
                           href={project.demoUrl} 
                           target="_blank" 

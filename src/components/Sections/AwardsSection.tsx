@@ -37,22 +37,33 @@ const AwardsSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {awards.map((award, index) => (
-            <a
+            <div
               key={index}
-              href={award.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group p-6 rounded-xl bg-gradient-to-br from-darkPurple/80 to-magenta/15 backdrop-blur-lg border border-white/10 hover-glow transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">
                 <Award className="w-8 h-8 text-golden" />
-                <ArrowUpRight className="w-6 h-6 text-magenta opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <a 
+                  href={award.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  <ArrowUpRight className="w-6 h-6 text-magenta group-hover:text-golden transition-colors duration-300" />
+                </a>
               </div>
-              <h3 className="text-xl font-semibold text-golden mb-2">{award.title}</h3>
-              <p className="text-white/90 font-medium">{award.competition}</p>
-              <p className="text-white/70 text-sm mt-1">{award.organization}</p>
-              <p className="text-white/50 text-sm mt-2">{award.date}</p>
-            </a>
+              <a 
+                href={award.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <h3 className="text-xl font-semibold text-golden mb-2">{award.title}</h3>
+                <p className="text-white/90 font-medium">{award.competition}</p>
+                <p className="text-white/70 text-sm mt-1">{award.organization}</p>
+                <p className="text-white/50 text-sm mt-2">{award.date}</p>
+              </a>
+            </div>
           ))}
         </div>
       </div>

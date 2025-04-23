@@ -15,6 +15,7 @@ const projects = [
     demoUrl: "https://mentalhealth-01.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/MentalHealth",
     icon: Brain,
+    hasDemoLink: true,
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const projects = [
     demoUrl: "https://dataviztoolkit.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/DataAnalysisToolkit",
     icon: ChartBar,
+    hasDemoLink: true,
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/Divyansh0108/E2E-text-summarization",
     icon: FileText,
+    hasDemoLink: false,
   },
 ];
 
@@ -115,14 +118,16 @@ const ProjectsSection = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="flex space-x-2">
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
-                      </a>
+                      {project.hasDemoLink && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
+                        </a>
+                      )}
                       <a
                         href={project.githubUrl}
                         target="_blank"
