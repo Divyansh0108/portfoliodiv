@@ -1,16 +1,14 @@
-
-import { ExternalLink, Github, Brain, ChartBar, FileText, ShieldCheck, CreditCard, NoteTaking, Heart } from "lucide-react";
+import { ExternalLink, Github, Brain, ChartBar, FileText, ShieldCheck, CreditCard, Notebook, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-// Illustrative icons for extra projects:
 const iconsMap: Record<string, any> = {
   "Mental Health Predictor": Brain,
-  "Data Analysis Toolkit": ChartBar,
+  "Comprehensive Data Analysis Toolkit": ChartBar,
   "E2E Text Summarization": FileText,
   "Network Security Suite": ShieldCheck,
   "Credit Risk Analysis": CreditCard,
-  "Note Taking App": NoteTaking,
+  "Note Taking App": Notebook,
   "Heart Disease Prediction": Heart,
 };
 
@@ -20,7 +18,7 @@ const projects = [
     title: "Mental Health Predictor",
     date: "March, 2025",
     description: "AI application to predict and assess mental health status. Early detection for depression among students.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b", // Suited: laptop/code
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     technologies: ["Python", "TensorFlow", "Streamlit", "Gemini Flash 1.5", "Matplotlib", "LIME", "scikit-learn"],
     demoUrl: "https://mentalhealth-01.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/MentalHealth",
@@ -31,7 +29,7 @@ const projects = [
     title: "Comprehensive Data Analysis Toolkit",
     date: "October, 2024",
     description: "Toolkit for data cleaning, feature engineering, transformation, and model building.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7", // Suited: colorful web code
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
     technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Plotly", "Machine Learning", "Data Cleaning", "Feature Engineering"],
     demoUrl: "https://dataviztoolkit.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/DataAnalysisToolkit",
@@ -42,19 +40,18 @@ const projects = [
     title: "E2E Text Summarization",
     date: "April, 2024",
     description: "End-to-end text summarization with deep learning & NLP.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085", // MacBook with code
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     technologies: ["Python", "NLP", "Transformers", "Flask", "React"],
-    demoUrl: "#", // If you have a demo link, replace here
+    demoUrl: "#",
     githubUrl: "https://github.com/Divyansh0108/E2E-text-summarization",
     icon: FileText,
   },
-  // Extra projects below:
   {
     id: 4,
     title: "Network Security Suite",
     date: "2024",
     description: "Robust codebase for secure logging, deployment, tracking, and features.",
-    image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b", // traffic, security look
+    image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
     technologies: ["Python", "Security", "Monitoring"],
     demoUrl: "#",
     githubUrl: "https://github.com/Divyansh0108/networkSecurity",
@@ -65,7 +62,7 @@ const projects = [
     title: "Credit Risk Analysis",
     date: "2024",
     description: "Machine learning for credit risk assessment and analytics.",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22", // finance-themed
+    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
     technologies: ["Python", "ML", "Finance"],
     demoUrl: "#",
     githubUrl: "https://github.com/Divyansh0108/Credit-Risk-Analysis",
@@ -76,18 +73,18 @@ const projects = [
     title: "Note Taking App",
     date: "2024",
     description: "A Django-based note taking web application.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", // monitor/code
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     technologies: ["Python", "Django", "Web"],
     demoUrl: "#",
     githubUrl: "https://github.com/Divyansh0108/Note-Taking-Python-Web-Tech",
-    icon: NoteTaking,
+    icon: Notebook,
   },
   {
     id: 7,
     title: "Heart Disease Prediction",
     date: "2024",
     description: "Predicts heart disease based on medical dataset analysis.",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04", // medical/health theme
+    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
     technologies: ["Python", "scikit-learn", "Data", "Healthcare"],
     demoUrl: "#",
     githubUrl: "https://github.com/Divyansh0108/heart-disease-pred",
