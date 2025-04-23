@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { School, GraduationCap } from "lucide-react";
 
 type Education = {
   id: number;
@@ -59,7 +60,7 @@ const EducationSection = () => {
       location: "Jaipur, Rajasthan, India",
       period: "Sep 2022 - Sep 2026",
       description: "Grade: 9.07. Relevant skills: Artificial Intelligence (AI), Machine Learning, Python, Data Analysis, Deep Learning, Computer Vision.",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Manipal_University_logo.png",
+      logo: "/lovable-uploads/534b6739-26f7-406a-b1fe-479e7a0f8a7a.png",
     },
     {
       id: 2,
@@ -68,7 +69,7 @@ const EducationSection = () => {
       location: "Lucknow, UP, India",
       period: "Mar 2020 - Jun 2021",
       description: "Grade: 93.64%",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/6/65/Generic_School_Emblem.png",
+      logo: "/lovable-uploads/2e1d6327-a33c-47e6-808c-ea07968f5391.png",
     }
   ];
 
@@ -114,7 +115,6 @@ const EducationSection = () => {
 
   return (
     <section id="education" className="py-20 relative overflow-hidden">
-      {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-violet/10 filter blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-magenta/10 filter blur-3xl"></div>
@@ -131,7 +131,6 @@ const EducationSection = () => {
           </p>
         </div>
         
-        {/* Education Timeline */}
         <div className="relative mb-20">
           <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-magenta via-violet to-golden hidden md:block ml-6"></div>
           
@@ -146,7 +145,6 @@ const EducationSection = () => {
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                {/* Timeline dot */}
                 <div className="absolute left-0 top-0 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-magenta to-violet flex items-center justify-center">
                     <div className="w-3 h-3 rounded-full bg-white"></div>
@@ -173,7 +171,6 @@ const EducationSection = () => {
           </div>
         </div>
         
-        {/* Publications Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
