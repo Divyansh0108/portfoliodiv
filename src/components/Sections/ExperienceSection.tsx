@@ -179,7 +179,7 @@ const ExperienceSection = () => {
                       {exp.responsibilities.map((resp, i) => (
                         <li key={i} className="flex items-start text-sm text-white/70">
                           <span className="mr-2 mt-1 text-golden">•</span>
-                          <span className="text-golden">{i === 0 ? resp : <span className="text-white/70">{resp}</span>}</span>
+                          <span className={i === 0 ? "text-golden" : "text-white/70"}>{resp}</span>
                         </li>
                       ))}
                     </ul>

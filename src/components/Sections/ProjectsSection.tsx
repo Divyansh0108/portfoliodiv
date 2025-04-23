@@ -112,7 +112,7 @@ const ProjectsSection = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-golden">{project.title}</h3>
                 <p className="text-white/70 mb-4 text-sm h-12">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
