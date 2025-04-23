@@ -25,7 +25,7 @@ const experience: Experience[] = [
   {
     id: 4,
     position: "Contributor",
-    company: "October 1",
+    company: "HacktoberFest",
     type: "Remote",
     mode: "Remote",
     location: "Jaipur, Rajasthan, India",

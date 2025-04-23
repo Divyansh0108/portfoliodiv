@@ -134,20 +134,20 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`rounded-xl overflow-hidden transition-all duration-700 hover-glow ${
+                className={`bg-gradient-to-br from-darkPurple/80 to-magenta/15 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden transition-all duration-700 hover-glow ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/80 to-magenta/15 backdrop-blur-lg border border-white/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/90 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/10 backdrop-blur-md">
                       {project.date}
@@ -156,7 +156,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-golden">{project.title}</h3>
                   <p className="text-white/70 mb-6 text-sm line-clamp-3">{project.fullDescription}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -177,14 +177,16 @@ const Projects = () => {
                   
                   <div className="flex justify-between items-center">
                     <div className="flex space-x-2">
-                      <a 
-                        href={project.demoUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
-                      </a>
+                      {project.demoUrl !== "#" && (
+                        <a 
+                          href={project.demoUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
+                        </a>
+                      )}
                       <a 
                         href={project.githubUrl} 
                         target="_blank" 
