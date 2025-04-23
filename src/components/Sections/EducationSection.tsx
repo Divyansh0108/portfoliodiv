@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 type Education = {
@@ -27,6 +26,7 @@ type Award = {
   issuer: string;
   date: string;
   description: string;
+  link: string;
 };
 
 const EducationSection = () => {
@@ -54,30 +54,21 @@ const EducationSection = () => {
   const education: Education[] = [
     {
       id: 1,
-      degree: "Ph.D. in Data Science",
-      institution: "Stanford University",
-      location: "Stanford, CA",
-      period: "2019 - 2023",
-      description: "Focused on advanced machine learning algorithms and their applications in healthcare. Thesis on 'Deep Learning Models for Early Disease Detection using Multi-modal Data'.",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/320px-Stanford_Cardinal_logo.svg.png"
+      degree: "Bachelor of Technology - BTech, Artificial Intelligence",
+      institution: "Manipal University Jaipur",
+      location: "Jaipur, Rajasthan, India",
+      period: "Sep 2022 - Sep 2026",
+      description: "Grade: 9.07. Relevant skills: Artificial Intelligence (AI), Machine Learning, Python, Data Analysis, Deep Learning, Computer Vision.",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Manipal_University_logo.png",
     },
     {
       id: 2,
-      degree: "M.S. in Computer Science",
-      institution: "Massachusetts Institute of Technology",
-      location: "Cambridge, MA",
-      period: "2017 - 2019",
-      description: "Specialized in Artificial Intelligence and Machine Learning. Conducted research on natural language processing and computer vision algorithms.",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/320px-MIT_logo.svg.png"
-    },
-    {
-      id: 3,
-      degree: "B.Tech in Computer Science & Engineering",
-      institution: "Indian Institute of Technology",
-      location: "Delhi, India",
-      period: "2013 - 2017",
-      description: "Graduated with honors. Specialized in algorithms and data structures. Completed capstone project on predictive modeling for stock market analysis.",
-      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Delhi_Logo.svg/320px-IIT_Delhi_Logo.svg.png"
+      degree: "12th, Physics, Chemistry, Maths, Computer Science",
+      institution: "St. Antony's Inter College",
+      location: "Lucknow, UP, India",
+      period: "Mar 2020 - Jun 2021",
+      description: "Grade: 93.64%",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/6/65/Generic_School_Emblem.png",
     }
   ];
 
@@ -106,23 +97,18 @@ const EducationSection = () => {
     {
       id: 1,
       title: "Dean's List for Excellence in Academics",
-      issuer: "Stanford University",
-      date: "2022",
-      description: "Recognized for having the highest Grade Point Average (GPA) in the Data Science program."
+      issuer: "Manipal University Jaipur",
+      date: "2023",
+      description: "For securing consistently exceptional grades and academic performance.",
+      link: "https://shorturl.at/EBLh7",
     },
     {
       id: 2,
-      title: "Dean's List for Excellence in Academics and Off-campus achievements",
-      issuer: "Stanford University",
-      date: "2021",
-      description: "Recognized for outstanding academic performance and contributions to research projects outside the university."
-    },
-    {
-      id: 3,
-      title: "Certification of Participation in Xiaomi Ode2Code 3.0",
-      issuer: "Xiaomi",
-      date: "2020",
-      description: "Selected to participate in this prestigious coding competition among thousands of applicants."
+      title: "Dean’s List for Excellence in Academics and Off-campus Achievements",
+      issuer: "Manipal University Jaipur",
+      date: "2024",
+      description: "Recognized for achievements in academics and significant contributions outside campus.",
+      link: "https://shorturl.at/i3OXr",
     }
   ];
 

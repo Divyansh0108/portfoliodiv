@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
@@ -30,67 +29,78 @@ const Projects = () => {
       id: 1,
       title: "Mental Health Predictor",
       date: "March, 2025",
-      description: "AI-powered web application to predict and assess mental health status, focusing on early detection of depression among students.",
-      fullDescription: "Developed an AI-powered web application to predict and assess mental health status, focusing on early detection of depression among students. Implemented a neural network model using TensorFlow, trained on a custom student mental health dataset with 27,000 records and 21 features, which after preprocessing brought down to 20209 records and 13 features. Integrated Gemini Flash 1.5 to provide personalized mental health insights and recommendations based on user inputs. Designed an interactive frontend with Streamlit, featuring real-time analysis, visualization, and model interpretability using LIME. Achieved high accuracy in depression prediction, identifying key influencing factors like sleep duration, academic pressure, and dietary habits.",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      description: "AI-powered web application for mental health assessment.",
+      fullDescription: "Developed an AI-powered web application to predict and assess mental health status, focusing on early detection of depression among students. Implemented a neural network model using TensorFlow, trained on a custom student mental health dataset. Integrated Gemini Flash 1.5 for insights, streamlit frontend for interactive dashboards, and LIME for model interpretability.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       technologies: ["Python", "TensorFlow", "Streamlit", "Gemini Flash 1.5", "Matplotlib", "LIME", "scikit-learn"],
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://mentalhealth-01.streamlit.app/",
+      githubUrl: "https://github.com/Divyansh0108/MentalHealth",
     },
     {
       id: 2,
       title: "Comprehensive Data Analysis Toolkit",
       date: "October, 2024",
-      description: "User-friendly toolkit for seamless data cleaning, feature engineering, data transformation, and model building to empower data scientists and analysts.",
-      fullDescription: "Developed a user-friendly toolkit for seamless data cleaning, feature engineering, data transformation, and model building to empower data scientists and analysts. Key features include: Data Cleaning (handling missing values, removing duplicates, and type conversion), Feature Engineering (generating new features, selecting the best ones, and creating polynomial features), Data Transformation (applying log transformations, scaling, and binning techniques), Model Building and Evaluation (training models, tuning hyperparameters, and performing cross-validation), and Interactive Visualizations (using Plotly for in-depth insights through dynamic plots and charts). Supported multiple input formats, such as CSV, Excel, and JSON, for enhanced usability.",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      description: "User-friendly toolkit for seamless data cleaning, feature engineering, and model building.",
+      fullDescription: "Developed a toolkit for seamless data cleaning, feature engineering, transformation, and model building with deep visualizations. Supports multiple formats (CSV, Excel, JSON), powered by pandas, plotly, and scikit-learn.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Plotly", "Machine Learning", "Data Cleaning", "Feature Engineering"],
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://dataviztoolkit.streamlit.app/",
+      githubUrl: "https://github.com/Divyansh0108/DataAnalysisToolkit",
     },
     {
       id: 3,
-      title: "Heart Disease Prediction Model",
-      date: "July, 2024",
-      description: "Analyzed relationships between age, sex, cholesterol, chest pain type, and heart rate to predict heart disease with high accuracy.",
-      fullDescription: "Analyzed relationships between age, sex, cholesterol, chest pain type, and heart rate to predict heart disease. Optimized model performance and accuracy by implementing scaling and hyperparameter tuning. Optimized using supervised learning algorithms for high availability and scalability in healthcare applications. Evaluated multiple models including Logistic Regression, Random Forest, Gradient Boosting, and SVM, selecting Logistic Regression for being 2% better than Random Forest, 12% better than Gradient Boosting, and 14% better than SVM.",
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      technologies: ["Python", "scikit-learn", "pandas", "numpy", "Streamlit", "matplotlib", "seaborn"],
+      title: "E2E Text Summarization",
+      date: "April, 2024",
+      description: "End-to-end text summarization using deep learning and NLP.",
+      fullDescription: "Built a deep learning application for generating concise summaries from long text inputs using transformer models, integrated with a Flask+React based interface.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      technologies: ["Python", "NLP", "Transformers", "Flask", "React"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Divyansh0108/E2E-text-summarization",
     },
     {
       id: 4,
-      title: "NLP-Based Sentiment Analysis",
-      date: "May, 2024",
-      description: "Developed a sentiment analysis tool for social media monitoring and brand reputation management.",
-      fullDescription: "Developed a comprehensive sentiment analysis tool using NLP techniques to analyze social media comments, reviews, and feedback for businesses. Implemented BERT-based transformer models to achieve over 91% accuracy in sentiment classification across various domains. Created a dashboard for real-time monitoring of brand sentiment and competitor analysis. The tool processes over 10,000 texts per minute and provides actionable insights through customizable reports and alerts.",
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      technologies: ["Python", "NLTK", "spaCy", "BERT", "Transformers", "Flask", "React", "MongoDB"],
+      title: "Network Security Suite",
+      date: "2024",
+      description: "Solid project codebase for secure logging, deployment, and tracking.",
+      fullDescription: "Provides a well-structured base for network security systems with modular tracking, advanced logging, and robust deployment strategies.",
+      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
+      technologies: ["Python", "Security", "Monitoring"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Divyansh0108/networkSecurity",
     },
     {
       id: 5,
-      title: "Predictive Stock Analysis Platform",
-      date: "February, 2024",
-      description: "Created a stock market prediction platform using advanced time series analysis and machine learning techniques.",
-      fullDescription: "Designed and implemented a stock market prediction platform that combines traditional time series analysis with deep learning models for accurate price forecasting. Utilized LSTM networks and attention mechanisms to capture long-term dependencies in stock price movements. Incorporated alternative data sources including news sentiment, social media buzz, and macroeconomic indicators to enhance prediction accuracy. The platform achieved a Mean Absolute Percentage Error (MAPE) of 3.2% for 5-day forecasts across major indices, outperforming baseline models by 27%.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      technologies: ["Python", "TensorFlow", "Keras", "LSTM", "Pandas", "NumPy", "Yahoo Finance API", "Plotly", "Django"],
+      title: "Credit Risk Analysis",
+      date: "2024",
+      description: "ML-driven analytics for credit risk scoring.",
+      fullDescription: "Implements standard and well-researched machine learning methods for predicting credit risk and portfolio analytics.",
+      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
+      technologies: ["Python", "ML", "Finance"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Divyansh0108/Credit-Risk-Analysis",
     },
     {
       id: 6,
-      title: "Computer Vision Traffic Analysis",
-      date: "November, 2023",
-      description: "Built a traffic monitoring and analysis system using computer vision and deep learning.",
-      fullDescription: "Developed a smart traffic monitoring system that uses computer vision to analyze traffic patterns, count vehicles, and detect anomalies in real-time. Implemented YOLOv5 for object detection with custom training to achieve 98% detection accuracy across various weather and lighting conditions. Created an analytics dashboard for traffic departments to visualize congestion patterns, estimate travel times, and identify accident-prone areas. The system processes video feeds at 30fps with low latency on edge devices, making it suitable for widespread deployment in smart city infrastructure.",
-      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      technologies: ["Python", "OpenCV", "PyTorch", "YOLOv5", "TensorRT", "Streamlit", "Docker", "NVIDIA DeepStream"],
+      title: "Note Taking App",
+      date: "2024",
+      description: "A Django-based full-featured note taking app.",
+      fullDescription: "Brilliant note taking application with REST backend, user auth, and instant notes—all built on Django & modern web stack.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      technologies: ["Python", "Django", "Web"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Divyansh0108/Note-Taking-Python-Web-Tech",
+    },
+    {
+      id: 7,
+      title: "Heart Disease Prediction",
+      date: "2024",
+      description: "Medical dataset based model to predict heart disease.",
+      fullDescription: "Predicts heart disease using advanced algorithms on medical features. Handles a range of factors, using scikit-learn, giving both accuracy and interpretability.",
+      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      technologies: ["Python", "scikit-learn", "Healthcare"],
+      demoUrl: "#",
+      githubUrl: "https://github.com/Divyansh0108/heart-disease-pred",
     },
   ];
 
@@ -124,7 +134,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`glass-card rounded-xl overflow-hidden transition-all duration-700 hover-glow ${
+                className={`rounded-xl overflow-hidden transition-all duration-700 hover-glow ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-10'
@@ -137,7 +147,7 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/90 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-darkPurple/80 to-magenta/15 backdrop-blur-lg border border-white/10"></div>
                   <div className="absolute bottom-4 left-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/10 backdrop-blur-md">
                       {project.date}
