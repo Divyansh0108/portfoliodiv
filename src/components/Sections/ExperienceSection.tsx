@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 
@@ -49,7 +50,7 @@ const ExperienceSection = () => {
         "Led a team of 4 data scientists to develop a real-time anomaly detection system for financial fraud prevention",
         "Collaborated with product teams to integrate AI capabilities into existing products"
       ],
-      logo: "" // removed use of logo later
+      logo: ""
     },
     {
       id: 2,
@@ -134,7 +135,7 @@ const ExperienceSection = () => {
                 key={exp.id}
                 className={`flex flex-col md:flex-row items-center md:items-start ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               >
-                {/* Content side (main card, now full width on mobile and desktop) */}
+                {/* Content side (main card) */}
                 <div 
                   className={`w-full md:w-5/12 ${
                     isVisible 
@@ -143,7 +144,7 @@ const ExperienceSection = () => {
                   } transition-all duration-700`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <div className="glass-card p-8 rounded-2xl hover-glow">
+                  <div className="glass-card p-8 rounded-2xl hover-glow bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10">
                     <div className="mb-4">
                       <h3 className="text-xl font-semibold text-golden">{exp.position}</h3>
                       <p className="text-white/80">{exp.company}</p>
@@ -192,11 +193,8 @@ const ExperienceSection = () => {
                     <div className="w-3 h-3 rounded-full bg-white"></div>
                   </div>
                 </div>
-                {/* Alternate side content removed */}
-                <div 
-                  className={`w-full md:w-5/12 mt-4 md:mt-0 transition-all duration-700`}
-                  style={{ transitionDelay: `${index * 200 + 100}ms` }}
-                >
+                {/* Alternate side content */}
+                <div className="w-full md:w-5/12 mt-4 md:mt-0 transition-all duration-700">
                   {/* Empty for now; alternate side panels removed as per instructions */}
                 </div>
               </div>

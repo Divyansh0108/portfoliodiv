@@ -77,7 +77,7 @@ const ContactSection = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="glass-card p-8 rounded-xl hover-glow">
+            <div className="bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-8 rounded-xl hover-glow">
               <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
               <p className="text-white/70 mb-8">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
@@ -202,7 +202,7 @@ const ContactSection = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-xl hover-glow">
+            <form onSubmit={handleSubmit} className="bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-8 rounded-xl hover-glow">
               <h3 className="text-2xl font-semibold mb-6 text-golden">Send Me a Message</h3>
               
               <div className="space-y-6">

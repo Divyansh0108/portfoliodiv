@@ -255,7 +255,7 @@ const SkillsSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill.name} 
-                    className={`flex-shrink-0 glass-card p-5 rounded-xl w-32 flex flex-col items-center justify-center transition-all duration-500 hover-glow hover:-translate-y-1 animate-delay-${(skillIndex % 5) * 100}`}
+                    className={`flex-shrink-0 bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-5 rounded-xl w-32 flex flex-col items-center justify-center transition-all duration-500 hover-glow hover:-translate-y-1 animate-delay-${(skillIndex % 5) * 100}`}
                     style={{ 
                       animationDelay: `${skillIndex * 100}ms`,
                       boxShadow: '0 4px 20px rgba(139, 92, 246, 0.15)'
@@ -277,7 +277,7 @@ const SkillsSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={`${skill.name}-dup`} 
-                    className={`flex-shrink-0 glass-card p-5 rounded-xl w-32 flex flex-col items-center justify-center transition-all duration-500 hover-glow hover:-translate-y-1`}
+                    className={`flex-shrink-0 bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-5 rounded-xl w-32 flex flex-col items-center justify-center transition-all duration-500 hover-glow hover:-translate-y-1`}
                     style={{ 
                       animationDelay: `${skillIndex * 100}ms`,
                       boxShadow: '0 4px 20px rgba(139, 92, 246, 0.15)'

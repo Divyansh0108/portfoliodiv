@@ -90,7 +90,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className={`glass-card rounded-xl overflow-hidden transition-all duration-700 hover-glow ${
+              className={`glass-card rounded-xl overflow-hidden transition-all duration-700 hover-glow bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-10'

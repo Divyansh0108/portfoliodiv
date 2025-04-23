@@ -167,7 +167,7 @@ const EducationSection = () => {
                   </div>
                 </div>
                 
-                <div className="glass-card p-6 rounded-xl hover-glow">
+                <div className="bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-6 rounded-xl hover-glow">
                   <div className="flex items-start">
                     <div className="flex-grow">
                       <h3 className="text-xl font-semibold">{edu.degree}</h3>
@@ -200,7 +200,7 @@ const EducationSection = () => {
             {publications.map((pub, index) => (
               <div 
                 key={pub.id}
-                className={`glass-card p-6 rounded-xl hover-glow transition-all duration-700 ${
+                className={`bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-6 rounded-xl hover-glow transition-all duration-700 ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-10'
@@ -245,7 +245,7 @@ const EducationSection = () => {
             {awards.map((award, index) => (
               <div 
                 key={award.id}
-                className={`glass-card p-6 rounded-xl hover-glow transition-all duration-700 ${
+                className={`bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-6 rounded-xl hover-glow transition-all duration-700 ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-10'
