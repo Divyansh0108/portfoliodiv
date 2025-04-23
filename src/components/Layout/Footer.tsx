@@ -1,10 +1,8 @@
 
-import { Link } from "react-router-dom";
 import { 
   Github, 
   Linkedin, 
   Instagram, 
-  FileText, 
   Mail,
   ArrowUp
 } from "lucide-react";
@@ -27,7 +25,7 @@ const Footer = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/Divyansh0108" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
@@ -36,7 +34,7 @@ const Footer = () => {
               <Github className="w-5 h-5 text-white" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/divyansh-pandey-ds/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
@@ -45,7 +43,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5 text-white" />
             </a>
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/hey.div__/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
@@ -54,7 +52,7 @@ const Footer = () => {
               <Instagram className="w-5 h-5 text-white" />
             </a>
             <a 
-              href="https://kaggle.com" 
+              href="https://www.kaggle.com/div0108" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
@@ -65,7 +63,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://medium.com" 
+              href="https://medium.com/@divyanshpandey0108" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
@@ -76,7 +74,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="mailto:contact@divyansh.com" 
+              href="mailto:divyanshpandey0108@gmail.com" 
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
               aria-label="Email"
             >
@@ -87,17 +85,9 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Divyansh Pandey. All rights reserved.
+            Made with <span className="text-golden text-base animate-pulse">&#10084;</span> by Divyansh Pandey &copy; {new Date().getFullYear()}
           </p>
-          
-          <div className="flex space-x-8">
-            <Link to="/" className="text-white/60 text-sm hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/" className="text-white/60 text-sm hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-            
+          <div className="flex">
             <button 
               onClick={scrollToTop}
               className="hover-glow rounded-full p-2 bg-white/5 hover:bg-white/10 transition-colors"
