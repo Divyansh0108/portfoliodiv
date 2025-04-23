@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -9,10 +9,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Update navbar style on scroll
       setIsScrolled(window.scrollY > 50);
       
-      // Update active section based on scroll position
       const sections = ["home", "about", "skills", "projects", "experience", "education", "contact"];
       
       for (const section of sections) {
@@ -55,8 +53,6 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet">
           Divyansh<span className="text-golden">.</span>
         </Link>
-
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <a
@@ -81,40 +77,40 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden text-white p-2"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor" 
-            className="w-6 h-6"
+        <div className="flex gap-3 items-center">
+          <ThemeToggle />
+          <button 
+            className="md:hidden text-white p-2"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
           >
-            {mobileMenuOpen ? (
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M6 18L18 6M6 6l12 12" 
-              />
-            ) : (
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M4 6h16M4 12h16M4 18h16" 
-              />
-            )}
-          </svg>
-        </button>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor" 
+              className="w-6 h-6"
+            >
+              {mobileMenuOpen ? (
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M6 18L18 6M6 6l12 12" 
+                />
+              ) : (
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M4 6h16M4 12h16M4 18h16" 
+                />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-darkPurple/95 backdrop-blur-md shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
