@@ -114,6 +114,16 @@ const ExperienceSection = () => {
           <p className="text-white/70 mt-4 max-w-2xl mx-auto">
             My professional journey in the world of data science and AI
           </p>
+          <div className="mt-8">
+            <a
+              href="https://www.linkedin.com/in/divyansh-pandey-ds/details/certifications/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-golden text-white px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-shadow hover:brightness-110 hover-glow mt-2"
+            >
+              Click here to view licenses and certifications
+            </a>
+          </div>
         </div>
         <div className="relative">
           {/* Timeline line */}
@@ -122,9 +132,7 @@ const ExperienceSection = () => {
             {experiences.map((exp, index) => (
               <div 
                 key={exp.id}
-                className={`flex flex-col md:flex-row items-center md:items-start ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                }`}
+                className={`flex flex-col md:flex-row items-center md:items-start ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               >
                 {/* Content side (main card, now full width on mobile and desktop) */}
                 <div 
@@ -135,9 +143,9 @@ const ExperienceSection = () => {
                   } transition-all duration-700`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <div className="glass-card p-6 rounded-xl hover-glow">
+                  <div className="glass-card p-8 rounded-2xl hover-glow">
                     <div className="mb-4">
-                      <h3 className="text-xl font-semibold">{exp.position}</h3>
+                      <h3 className="text-xl font-semibold text-golden">{exp.position}</h3>
                       <p className="text-white/80">{exp.company}</p>
                     </div>
                     <div className="flex items-center mb-2 text-sm">
@@ -169,8 +177,8 @@ const ExperienceSection = () => {
                     <ul className="space-y-2">
                       {exp.responsibilities.map((resp, i) => (
                         <li key={i} className="flex items-start text-sm text-white/70">
-                          <span className="mr-2 mt-1">•</span>
-                          <span>{resp}</span>
+                          <span className="mr-2 mt-1 text-golden">•</span>
+                          <span className="text-golden">{i === 0 ? resp : <span className="text-white/70">{resp}</span>}</span>
                         </li>
                       ))}
                     </ul>

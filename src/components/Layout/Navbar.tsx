@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
+// ThemeToggle import removed
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -78,7 +79,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex gap-3 items-center">
-          <ThemeToggle />
+          {/* ThemeToggle removed */}
           <button 
             className="md:hidden text-white p-2"
             onClick={toggleMobileMenu}

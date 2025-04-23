@@ -33,17 +33,20 @@ const HeroSection = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet text-center">
               Data Scientist &amp; ML Engineer
             </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl text-center">
+            <p className="text-lg text-white/80 mb-2 max-w-2xl text-center">
               Transforming raw data into meaningful insights and powerful AI solutions.
+            </p>
+            <p className="text-lg mb-8 max-w-2xl text-center text-golden font-semibold">
               Specializing in machine learning, deep learning, and data visualization.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center mb-2">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
-                    href="/resume.pdf"
+                    href="https://drive.google.com/file/d/12ZLZJwVF5tPSTM6T7rGwyZ5i5r5Im7ki/view?usp=sharing"
                     className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(217,70,239,0.25)]"
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FileText className="mr-2 w-5 h-5" />
                     Download Resume
@@ -56,7 +59,7 @@ const HeroSection = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
-                    href="#contact"
+                    href="mailto:divyanshpandey0108@gmail.com"
                     className="btn-shadow px-6 py-3 rounded-lg font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center group"
                   >
                     Contact Me

@@ -85,7 +85,8 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
-            Made with <span className="text-golden text-base animate-pulse">&#10084;</span> by Divyansh Pandey &copy; {new Date().getFullYear()}
+            <span className="text-golden text-base animate-pulse">&#10084;</span>
+            <span className="ml-1">Made with love by Divyansh Pandey &copy; {new Date().getFullYear()}</span>
           </p>
           <div className="flex">
             <button 
