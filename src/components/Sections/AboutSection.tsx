@@ -45,7 +45,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-magenta/30 to-violet/30 rounded-2xl blur-xl transform rotate-6"></div>
               <div className="relative rounded-2xl overflow-hidden glass-card p-2 hover-glow">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                  src="/lovable-uploads/93154044-e8bb-4435-b50d-016b6b0714d8.png" 
                   alt="Divyansh Pandey" 
                   className="rounded-xl w-full aspect-[4/5] object-cover"
                 />
