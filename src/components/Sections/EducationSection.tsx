@@ -217,43 +217,6 @@ const EducationSection = () => {
             ))}
           </div>
         </div>
-        
-        {/* Awards Section */}
-        <div>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet">Awards</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-magenta to-violet mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {awards.map((award, index) => (
-              <div 
-                key={award.id}
-                className={`bg-gradient-to-br from-darkPurple/60 to-secondaryPurple/10 backdrop-blur-md border border-white/10 p-6 rounded-xl hover-glow transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 200 + 600}ms` }}
-              >
-                <div className="text-golden flex justify-center mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v5.586l-2.293-2.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L11 10.586V5z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-center text-lg font-semibold mb-2">{award.title}</h3>
-                <div className="text-center mb-3">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/10">
-                    {award.issuer} • {award.date}
-                  </span>
-                </div>
-                <p className="text-white/70 text-sm text-center">{award.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
