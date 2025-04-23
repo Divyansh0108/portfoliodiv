@@ -1,40 +1,10 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 222 45% 9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 277 75% 38%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 276 80% 95%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 260 20% 93%;
-    --muted-foreground: 217 16.3% 46.9%;
-    --accent: 293 95% 76%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 218 27% 91%;
-    --input: 218 27% 91%;
-    --ring: 277 75% 38%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -81,11 +51,6 @@
     @apply bg-opacity-20 backdrop-blur-md bg-white/60 dark:bg-white/5 border border-white/10 rounded-xl shadow-xl transition-all duration-500;
   }
   .animated-gradient-bg {
-    background: linear-gradient(139deg, #f5d5ff 0%, #ecfcff 40%, #ffe29f 100%);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-  }
-  .dark .animated-gradient-bg {
     background: linear-gradient(45deg, #1A1F2C, #2E1B3B, #451D6A);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
