@@ -10,30 +10,9 @@ type Experience = {
   location: string;
   period: string;
   current?: boolean;
-  // description?: string; for now ignore responsibilities
 };
 
 const experience: Experience[] = [
-  {
-    id: 1,
-    position: "Intern",
-    company: "IIT Hyderabad (VIGIL Labs)",
-    type: "Internship",
-    mode: "On-site",
-    location: "Hyderabad, India",
-    period: "Apr 2025 - Present",
-    current: true,
-  },
-  {
-    id: 2,
-    position: "Contributor",
-    company: "Redwood Lab",
-    type: "Contributor",
-    mode: "Remote",
-    location: "Jaipur, Rajasthan, India",
-    period: "Jan 2025 - Present",
-    current: true,
-  },
   {
     id: 3,
     position: "Contributor",
@@ -60,15 +39,19 @@ const experience: Experience[] = [
     mode: "Remote",
     location: "Jaipur, Rajasthan, India",
     period: "Jan 2024 - Jan 2024",
-  },
+  }
+];
+
+const currentExperience: Experience[] = [
   {
     id: 6,
-    position: "Student Intern",
-    company: "Casa Private Limited",
-    type: "Part Time Internship",
-    mode: "Remote",
-    location: "Jaipur, Rajasthan, India",
-    period: "Jul 2023 - Aug 2023",
+    position: "Intern",
+    company: "IIT Hyderabad (VIGIL Labs)",
+    type: "Internship",
+    mode: "On-site",
+    location: "Hyderabad, India",
+    period: "Apr 2025 - Present",
+    current: true,
   },
 ];
 
@@ -109,7 +92,7 @@ const ExperienceSection = () => {
           </p>
         </div>
         <div className="space-y-10">
-          {experience.map((exp, index) => (
+          {currentExperience.concat(experience).map((exp, index) => (
             <div
               key={exp.id}
               className={`bg-gradient-to-br from-darkPurple/80 to-magenta/15 backdrop-blur-lg border border-white/10 p-6 rounded-xl hover-glow transition-all duration-700 ${

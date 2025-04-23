@@ -83,8 +83,10 @@ const AboutSection = () => {
                 Contact Me
               </a>
               <a 
-                href="#" 
+                href="https://drive.google.com/file/d/12ZLZJwVF5tPSTM6T7rGwyZ5i5r5Im7ki/view?usp=sharing"
                 className="btn-shadow px-6 py-3 rounded-lg font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
                 download
               >
                 <FileText className="mr-2 w-5 h-5" />
