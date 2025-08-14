@@ -1,31 +1,23 @@
-
 import { useState, useEffect } from "react";
 import { FileText } from "lucide-react";
-
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, {
+      threshold: 0.1
+    });
     const section = document.getElementById("about");
     if (section) observer.observe(section);
-    
     return () => {
       if (section) observer.unobserve(section);
     };
   }, []);
-
-  return (
-    <section id="about" className="py-20 relative overflow-hidden">
+  return <section id="about" className="py-20 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-violet/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-magenta/10 rounded-full filter blur-3xl"></div>
@@ -41,9 +33,7 @@ const AboutSection = () => {
         <div className="flex flex-col items-center">
           {/* About Content */}
           <div className={`max-w-4xl transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h3 className="text-2xl font-semibold mb-4 text-center">
-              Data Wizard | ML Engineer | Problem Solver
-            </h3>
+            <h3 className="text-2xl font-semibold mb-4 text-center">Data Wizard | ML Engineer | Avid Learner</h3>
             
             <p className="text-white/80 mb-6 text-lg leading-relaxed text-center">
               I'm a passionate Data Scientist and Machine Learning Engineer with expertise in developing AI-powered solutions 
@@ -58,19 +48,10 @@ const AboutSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-              <a 
-                href="#contact" 
-                className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
-              >
+              <a href="#contact" className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center">
                 Contact Me
               </a>
-              <a 
-                href="https://drive.google.com/file/d/12ZLZJwVF5tPSTM6T7rGwyZ5i5r5Im7ki/view?usp=sharing"
-                className="btn-shadow px-6 py-3 rounded-lg font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-              >
+              <a href="https://drive.google.com/file/d/12ZLZJwVF5tPSTM6T7rGwyZ5i5r5Im7ki/view?usp=sharing" className="btn-shadow px-6 py-3 rounded-lg font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center" target="_blank" rel="noopener noreferrer" download>
                 <FileText className="mr-2 w-5 h-5" />
                 Download Resume
               </a>
@@ -78,8 +59,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
