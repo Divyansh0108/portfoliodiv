@@ -38,44 +38,26 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-magenta to-violet mx-auto rounded-full"></div>
         </div>
         
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Profile Image */}
-          <div className={`lg:w-1/3 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-magenta/30 to-violet/30 rounded-2xl blur-xl transform rotate-6"></div>
-              <div className="relative rounded-2xl overflow-hidden glass-card p-2 hover-glow">
-                <img 
-                  src="/lovable-uploads/93154044-e8bb-4435-b50d-016b6b0714d8.png" 
-                  alt="Divyansh Pandey" 
-                  className="rounded-xl w-full aspect-[4/5] object-cover"
-                />
-                <div className="absolute bottom-2 left-2 right-2 glass-card p-2 rounded-lg">
-                  <p className="text-white font-medium">Divyansh Pandey</p>
-                  <p className="text-white/70 text-sm">Data Scientist & ML Engineer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        <div className="flex flex-col items-center">
           {/* About Content */}
-          <div className={`lg:w-2/3 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <h3 className="text-2xl font-semibold mb-4">
+          <div className={`max-w-4xl transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h3 className="text-2xl font-semibold mb-4 text-center">
               Data Wizard | ML Engineer | Problem Solver
             </h3>
             
-            <p className="text-white/80 mb-6 text-lg leading-relaxed">
+            <p className="text-white/80 mb-6 text-lg leading-relaxed text-center">
               I'm a passionate Data Scientist and Machine Learning Engineer with expertise in developing AI-powered solutions 
               for complex problems. My journey in the world of data started with a curiosity about how numbers tell stories 
               and evolved into a career of transforming data into actionable insights and intelligent systems.
             </p>
             
-            <p className="text-white/80 mb-8 text-lg leading-relaxed">
+            <p className="text-white/80 mb-8 text-lg leading-relaxed text-center">
               I specialize in developing machine learning models, deep learning architectures, and data visualization 
               systems that help organizations make data-driven decisions. With a strong foundation in statistics, 
               programming, and problem-solving, I bring a unique perspective to every project I undertake.
             </p>
             
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
               <a 
                 href="#contact" 
                 className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
