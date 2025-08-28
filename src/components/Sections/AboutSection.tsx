@@ -37,11 +37,11 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-magenta to-violet mx-auto rounded-full"></div>
         </div>
         
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Profile Image */}
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          {/* Profile Image - Now on Left */}
           <div className={`flex-shrink-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-magenta/20 to-violet/20 p-1">
+              <div className="w-96 h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-magenta/20 to-violet/20 p-1">
                 <img 
                   src="/lovable-uploads/d86ad75d-5bfe-4922-ab6a-1fa3acea42e0.png" 
                   alt="Divyansh Pandey - Data Scientist and ML Engineer"
@@ -52,23 +52,34 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* About Content */}
+          {/* About Content - Now on Right */}
           <div className={`max-w-2xl transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h3 className="text-2xl font-semibold mb-4 text-center">Data Scientist | Applied Researcher | ML Engineer | Avid Learner</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-left">Data Scientist | Applied Researcher | ML Engineer | Avid Learner</h3>
             
-            <p className="text-white/80 mb-6 text-lg leading-relaxed text-center">
+            <p className="text-white/80 mb-6 text-lg leading-relaxed">
               I'm a passionate Data Scientist and Machine Learning Engineer with expertise in developing AI-powered solutions 
               for complex problems. My journey in the world of data started with a curiosity about how numbers tell stories 
               and evolved into a career of transforming data into actionable insights and intelligent systems.
             </p>
             
-            <p className="text-white/80 mb-8 text-lg leading-relaxed text-center">
+            <p className="text-white/80 mb-6 text-lg leading-relaxed">
+              I love researching on healthcare topics, in the domain of AI and DL. I am still exploring the LLM and GenAI domain, 
+              learning daily. I love posting my content on my socials and interacting with fellow devs. Always glittering with ideas 
+              in my mind, and trying to implement the same.
+            </p>
+
+            <p className="text-white/80 mb-6 text-lg leading-relaxed">
+              My life has a purpose which I am yet to find. I also love teaching what I have learned. Sometimes, it's no clue where 
+              I am heading towards, but the journey counts. New skills, new projects, new people, new environment, I am all up for it.
+            </p>
+            
+            <p className="text-white/80 mb-8 text-lg leading-relaxed">
               I specialize in developing machine learning models, deep learning architectures, and data visualization 
               systems that help organizations make data-driven decisions. With a strong foundation in statistics, 
               programming, and problem-solving, I bring a unique perspective to every project I undertake.
             </p>
             
-            <div className="flex justify-center">
+            <div className="flex justify-start">
               <a href="#contact" className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center">
                 Contact Me
               </a>
