@@ -43,9 +43,10 @@ const experience: Experience[] = [
     location: "Jaipur, Rajasthan, India",
     period: "Oct 2024 - Oct 2024",
     responsibilities: [
-      "Contributed to open-source projects focusing on AI and ML implementations",
-      "Developed and optimized machine learning algorithms for enhanced performance",
-      "Collaborated with global developers to improve code quality and documentation"
+      "Contributed to open-source projects focusing on AI and machine learning implementations",
+      "Developed and optimized algorithms for computer vision and natural language processing tasks",
+      "Collaborated with global developers to improve code quality, documentation, and project scalability",
+      "Participated in code reviews and maintained best practices for ML model deployment"
     ]
   },
   {
@@ -57,9 +58,9 @@ const experience: Experience[] = [
     location: "Jaipur, Rajasthan, India",
     period: "Jan 2024 - Jan 2024",
     responsibilities: [
-      "Completed simulation focused on processing engineering tickets for credit-card rewards department",
-      "Created and implemented new class to enhance system functionality",
-      "Developed comprehensive test suite for newly added class components"
+      "Completed a simulation focused on the process of completing an engineering ticket for a system in the credit-card rewards department of JPMorgan Chase & Co.",
+      "Created a new class to get an existing system up and running",
+      "Wrote a comprehensive test suite for the class added"
     ]
   }
 ];
@@ -70,11 +71,16 @@ const currentExperience: Experience[] = [
     position: "Intern",
     company: "IIT Hyderabad (VIGIL Labs)",
     type: "Internship",
-    mode: "On-site",
-    location: "Hyderabad, India",
+    mode: "Remote",
+    location: "Hyderabad, Telangana, India",
     period: "Apr 2025 - Present",
     current: true,
-    responsibilities: ["Details not disclosed"]
+    responsibilities: [
+      "Contributed to the development of a federated learning model for decentralized medical image classification and segmentation",
+      "Addressed challenges of distributed data privacy, heterogeneity, and communication efficiency, reducing global communication round time by 45% and using 55% fewer resources than baselines through proposed improvements",
+      "Proposed and implemented improvements to enhance performance and alignment with project objectives",
+      "Understood and worked with complex machine learning workflows, including model aggregation strategies and secure computation techniques"
+    ]
   },
 ];
 
@@ -142,11 +148,11 @@ const ExperienceSection = () => {
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                       <div>
                         <h3 className="text-xl font-semibold text-golden">{exp.position}</h3>
-                        <div className="text-white/80">{exp.company}</div>
-                        <div className="text-white/60 text-sm">{exp.period}</div>
+                        <div className="text-white/80 font-medium">{exp.company}</div>
+                        <div className="text-violet-300 text-sm font-medium">{exp.period}</div>
                       </div>
                       <CollapsibleTrigger className="self-end md:self-center">
-                        <button className="px-4 py-2 text-sm rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2">
+                        <button className="px-4 py-2 text-sm rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2 text-magenta font-medium">
                           Read More
                           <ChevronDown className="h-4 w-4 transition-transform duration-200" />
                         </button>
@@ -154,9 +160,11 @@ const ExperienceSection = () => {
                     </div>
 
                     <div className="flex flex-wrap items-center gap-x-6 mt-2 text-white/70 text-sm">
-                      <span>{exp.location}</span>
+                      <span className="text-white/80">{exp.location}</span>
                       <span className="mx-2">|</span>
-                      <span>{exp.mode}</span>
+                      <span className="text-white/80">{exp.mode}</span>
+                      <span className="mx-2">|</span>
+                      <span className="text-violet-200">{exp.type}</span>
                       {exp.current && (
                         <span className="ml-4 px-3 py-0.5 rounded-full bg-golden/10 text-golden text-xs font-semibold">
                           Current

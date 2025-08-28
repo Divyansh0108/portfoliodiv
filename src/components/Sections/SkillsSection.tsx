@@ -53,6 +53,10 @@ const SkillsSection = () => {
           name: "JavaScript", 
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
         },
+        { 
+          name: "Matlab", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" 
+        },
       ]
     },
     {
@@ -98,10 +102,14 @@ const SkillsSection = () => {
           name: "CNN", 
           icon: "https://cdn-icons-png.flaticon.com/512/8637/8637099.png" 
         },
+        { 
+          name: "GAN", 
+          icon: "https://cdn-icons-png.flaticon.com/512/5738/5738077.png" 
+        },
       ]
     },
     {
-      title: "Development",
+      title: "Development & Frameworks",
       skills: [
         { 
           name: "Flask", 
@@ -126,7 +134,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "Data Manipulation",
+      title: "Data Manipulation & Visualization",
       skills: [
         { 
           name: "Pandas", 
@@ -148,10 +156,18 @@ const SkillsSection = () => {
           name: "Matplotlib", 
           icon: "https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg" 
         },
+        { 
+          name: "Power BI", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" 
+        },
+        { 
+          name: "Grafana", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" 
+        },
       ]
     },
     {
-      title: "Databases",
+      title: "Databases & Storage",
       skills: [
         { 
           name: "MySQL", 
@@ -164,6 +180,109 @@ const SkillsSection = () => {
         { 
           name: "MongoDB", 
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
+        },
+        { 
+          name: "SQLite", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" 
+        },
+        { 
+          name: "ChromaDB", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+        { 
+          name: "FAISS", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+        { 
+          name: "AstraDB", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+      ]
+    },
+    {
+      title: "MLOps & Data Engineering",
+      skills: [
+        { 
+          name: "DVC", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+        { 
+          name: "MLflow", 
+          icon: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png" 
+        },
+        { 
+          name: "DAGsHub", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+        { 
+          name: "BentoML", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+        { 
+          name: "Airflow", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" 
+        },
+        { 
+          name: "Kafka", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" 
+        },
+        { 
+          name: "ETL", 
+          icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png" 
+        },
+      ]
+    },
+    {
+      title: "LangChain & AI Tools",
+      skills: [
+        { 
+          name: "LangChain", 
+          icon: "https://cdn-icons-png.flaticon.com/512/5738/5738077.png" 
+        },
+        { 
+          name: "LangGraph", 
+          icon: "https://cdn-icons-png.flaticon.com/512/5738/5738077.png" 
+        },
+        { 
+          name: "LangServe", 
+          icon: "https://cdn-icons-png.flaticon.com/512/5738/5738077.png" 
+        },
+        { 
+          name: "LangSmith", 
+          icon: "https://cdn-icons-png.flaticon.com/512/5738/5738077.png" 
+        },
+        { 
+          name: "Groq", 
+          icon: "https://cdn-icons-png.flaticon.com/512/5738/5738077.png" 
+        },
+      ]
+    },
+    {
+      title: "Cloud Platforms",
+      skills: [
+        { 
+          name: "AWS S3", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" 
+        },
+        { 
+          name: "AWS EC2", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" 
+        },
+        { 
+          name: "AWS IAM", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" 
+        },
+        { 
+          name: "AWS RDS", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" 
+        },
+        { 
+          name: "GCP", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" 
+        },
+        { 
+          name: "Azure", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" 
         },
       ]
     },

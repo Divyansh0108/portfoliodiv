@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { ArrowRight, FileText, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 
 const HeroSection = () => {
@@ -31,7 +31,7 @@ const HeroSection = () => {
               Divyansh Pandey
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet text-center">
-              Data Scientist &amp; ML Engineer
+              Data Scientist, Applied Researcher, ML Engineer
             </h2>
             <p className="text-lg text-white/80 mb-2 max-w-2xl text-center">
               Transforming raw data into meaningful insights and powerful AI solutions.
@@ -43,24 +43,8 @@ const HeroSection = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
-                    href="https://drive.google.com/file/d/12ZLZJwVF5tPSTM6T7rGwyZ5i5r5Im7ki/view?usp=sharing"
-                    className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(217,70,239,0.25)]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FileText className="mr-2 w-5 h-5" />
-                    Download Resume
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  Download Resume
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
                     href="mailto:divyanshpandey0108@gmail.com"
-                    className="btn-shadow px-6 py-3 rounded-lg font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center group"
+                    className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(217,70,239,0.25)]"
                   >
                     Contact Me
                     <Mail className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
