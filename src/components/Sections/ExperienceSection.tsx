@@ -68,13 +68,12 @@ const experience: Experience[] = [
 const currentExperience: Experience[] = [
   {
     id: 6,
-    position: "Intern",
+    position: "Student Project Intern",
     company: "IIT Hyderabad (VIGIL Labs)",
     type: "Internship",
     mode: "Remote",
     location: "Hyderabad, Telangana, India",
     period: "Apr 2025 - Present",
-    current: true,
     responsibilities: [
       "Contributed to the development of a federated learning model for decentralized medical image classification and segmentation",
       "Addressed challenges of distributed data privacy, heterogeneity, and communication efficiency, reducing global communication round time by 45% and using 55% fewer resources than baselines through proposed improvements",
@@ -86,6 +85,7 @@ const currentExperience: Experience[] = [
 
 const ExperienceSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [openItems, setOpenItems] = useState<number[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -143,7 +143,17 @@ const ExperienceSection = () => {
                   </div>
                 </div>
 
-                <Collapsible className="w-full">
+                <Collapsible 
+                  className="w-full"
+                  open={openItems.includes(exp.id)}
+                  onOpenChange={(isOpen) => {
+                    if (isOpen) {
+                      setOpenItems([...openItems, exp.id]);
+                    } else {
+                      setOpenItems(openItems.filter(id => id !== exp.id));
+                    }
+                  }}
+                >
                   <div className="bg-gradient-to-br from-darkPurple/80 to-magenta/15 backdrop-blur-lg border border-white/10 p-6 rounded-xl hover-glow">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                       <div>
@@ -153,8 +163,8 @@ const ExperienceSection = () => {
                       </div>
                       <CollapsibleTrigger className="self-end md:self-center">
                         <button className="px-4 py-2 text-sm rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-2 text-magenta font-medium">
-                          Read More
-                          <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+                          {openItems.includes(exp.id) ? 'Read Less' : 'Read More'}
+                          <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${openItems.includes(exp.id) ? 'rotate-180' : ''}`} />
                         </button>
                       </CollapsibleTrigger>
                     </div>
@@ -165,11 +175,6 @@ const ExperienceSection = () => {
                       <span className="text-white/80">{exp.mode}</span>
                       <span className="mx-2">|</span>
                       <span className="text-violet-200">{exp.type}</span>
-                      {exp.current && (
-                        <span className="ml-4 px-3 py-0.5 rounded-full bg-golden/10 text-golden text-xs font-semibold">
-                          Current
-                        </span>
-                      )}
                     </div>
 
                     <CollapsibleContent>

@@ -39,19 +39,68 @@ const HeroSection = () => {
             <p className="text-lg mb-8 max-w-2xl text-center text-golden font-semibold">
               Specializing in machine learning, deep learning, and data visualization.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center mb-2">
+            <div className="flex flex-wrap justify-center gap-4 mb-2">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
-                    href="mailto:divyanshpandey0108@gmail.com"
-                    className="btn-shadow px-6 py-3 rounded-lg font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(217,70,239,0.25)]"
+                    href="https://www.linkedin.com/in/divyansh-pandey-ds/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-shadow px-4 py-3 rounded-lg font-medium bg-gradient-to-r from-blue-600 to-blue-700 text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(37,99,235,0.25)]"
                   >
-                    Contact Me
-                    <Mail className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    LinkedIn
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>
-                  Contact Me
+                  LinkedIn Profile
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://peerlist.io/divyanshpandey"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-shadow px-4 py-3 rounded-lg font-medium bg-gradient-to-r from-green-600 to-green-700 text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(34,197,94,0.25)]"
+                  >
+                    Peerlist
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  Peerlist Profile
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://medium.com/@divyanshpandey0108"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-shadow px-4 py-3 rounded-lg font-medium bg-gradient-to-r from-gray-800 to-gray-900 text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(107,114,128,0.25)]"
+                  >
+                    Medium
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  Medium Articles
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://www.instagram.com/metadatahere/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-shadow px-4 py-3 rounded-lg font-medium bg-gradient-to-r from-pink-600 to-purple-600 text-white flex items-center justify-center group transition-shadow hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.25)]"
+                  >
+                    Instagram
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  Instagram Profile
                 </TooltipContent>
               </Tooltip>
             </div>
