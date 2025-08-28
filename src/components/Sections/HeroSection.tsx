@@ -5,10 +5,43 @@ import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from "../ui/
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
+  const titles = ["Data Scientist", "Applied Researcher", "ML Engineer"];
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  useEffect(() => {
+    const currentTitle = titles[currentTitleIndex];
+    let timeoutId: NodeJS.Timeout;
+
+    if (isTyping) {
+      if (displayedText.length < currentTitle.length) {
+        timeoutId = setTimeout(() => {
+          setDisplayedText(currentTitle.slice(0, displayedText.length + 1));
+        }, 150);
+      } else {
+        timeoutId = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000);
+      }
+    } else {
+      if (displayedText.length > 0) {
+        timeoutId = setTimeout(() => {
+          setDisplayedText(displayedText.slice(0, -1));
+        }, 100);
+      } else {
+        setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+        setIsTyping(true);
+      }
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [displayedText, currentTitleIndex, isTyping, titles]);
 
   return (
     <section 
@@ -30,8 +63,9 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">
               Divyansh Pandey
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet text-center">
-              Data Scientist, Applied Researcher, ML Engineer
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-magenta to-violet text-center min-h-[3rem] md:min-h-[4rem]">
+              {displayedText}
+              <span className="animate-pulse">|</span>
             </h2>
             <p className="text-lg text-white/80 mb-2 max-w-2xl text-center">
               Transforming raw data into meaningful insights and powerful AI solutions.
