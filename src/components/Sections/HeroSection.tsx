@@ -23,17 +23,17 @@ const HeroSection = () => {
       if (displayedText.length < currentTitle.length) {
         timeoutId = setTimeout(() => {
           setDisplayedText(currentTitle.slice(0, displayedText.length + 1));
-        }, 150);
+        }, 80);
       } else {
         timeoutId = setTimeout(() => {
           setIsTyping(false);
-        }, 2000);
+        }, 1200);
       }
     } else {
       if (displayedText.length > 0) {
         timeoutId = setTimeout(() => {
           setDisplayedText(displayedText.slice(0, -1));
-        }, 100);
+        }, 50);
       } else {
         setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
         setIsTyping(true);
