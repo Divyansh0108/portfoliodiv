@@ -117,7 +117,7 @@ const Projects = () => {
       date: "2024",
       description: "Medical dataset based model to predict heart disease.",
       fullDescription: "Predicts heart disease using advanced algorithms on medical features. Handles a range of factors, using scikit-learn, giving both accuracy and interpretability.",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063",
+      image: "https://images.unsplash.com/photo-1628348070889-cb656235b4eb?auto=format&fit=crop&w=800&q=80",
       technologies: ["Python", "scikit-learn", "Healthcare"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/heart-disease-pred",
