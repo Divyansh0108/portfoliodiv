@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
+import humanHeartImage from "../assets/human-heart.jpg";
 
 type Project = {
   id: number;
@@ -30,7 +31,7 @@ const Projects = () => {
     {
       id: 1,
       title: "GetAnime – Anime Recommendation System",
-      date: "December, 2024",
+      date: "August, 2025",
       description: "AI-powered anime recommendation system using semantic search and GenAI.",
       fullDescription: "An interactive recommendation engine that brings together the latest GenAI techniques, retrieval-augmented pipelines, and production-ready architecture to help users explore and discover anime tailored to their preferences. Takes natural language queries like 'adventure with underdog protagonist' and returns curated anime recommendations with explanations.",
       image: "/lovable-uploads/e3317266-dbcf-4ec5-8040-5ced8afbf71f.png",
@@ -117,7 +118,7 @@ const Projects = () => {
       date: "2024",
       description: "Medical dataset based model to predict heart disease.",
       fullDescription: "Predicts heart disease using advanced algorithms on medical features. Handles a range of factors, using scikit-learn, giving both accuracy and interpretability.",
-      image: "https://images.unsplash.com/photo-1628348070889-cb656235b4eb?auto=format&fit=crop&w=800&q=80",
+      image: humanHeartImage,
       technologies: ["Python", "scikit-learn", "Healthcare"],
       demoUrl: "#",
       githubUrl: "https://github.com/Divyansh0108/heart-disease-pred",
@@ -197,26 +198,36 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <div className="flex space-x-2">
-                      {project.hasDemoLink && (
-                        <a 
-                          href={project.demoUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
-                        >
-                          <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
-                        </a>
-                      )}
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center"
-                      >
-                        <Github className="w-3.5 h-3.5 mr-1" /> GitHub
-                      </a>
-                    </div>
+                     <div className="flex space-x-2">
+                       {project.hasDemoLink && (
+                         <a 
+                           href={project.demoUrl} 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-magenta to-violet text-white flex items-center justify-center"
+                         >
+                           <ExternalLink className="w-3.5 h-3.5 mr-1" /> Demo
+                         </a>
+                       )}
+                       {project.id === 1 && (
+                         <a 
+                           href="https://medium.com/@divyanshpandey0108/building-your-very-own-anime-recommendation-system-6ec98298ef12" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white transition-colors flex items-center justify-center"
+                         >
+                           <ExternalLink className="w-3.5 h-3.5 mr-1" /> Medium
+                         </a>
+                       )}
+                       <a 
+                         href={project.githubUrl} 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center"
+                       >
+                         <Github className="w-3.5 h-3.5 mr-1" /> GitHub
+                       </a>
+                     </div>
                   </div>
                 </div>
               </div>
