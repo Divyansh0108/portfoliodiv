@@ -10,7 +10,7 @@ const projects = [
     title: "GetAnime – Anime Recommendation System",
     date: "December, 2024",
     description: "AI-powered anime recommendation system using semantic search and GenAI. Input natural language queries like 'adventure with underdog protagonist' and get personalized anime recommendations with explanations.",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+    image: "/lovable-uploads/e3317266-dbcf-4ec5-8040-5ced8afbf71f.png",
     technologies: ["Python", "Streamlit", "LangChain", "Sentence Transformers", "FAISS", "Groq LLM", "Docker", "Kubernetes"],
     demoUrl: "https://getanime.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/AnimAI-Navigator",
