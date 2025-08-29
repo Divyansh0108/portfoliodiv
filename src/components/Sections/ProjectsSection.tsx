@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, Brain, ChartBar, FileText } from "lucide-react";
+import { ExternalLink, Github, Brain, ChartBar, FileText, BookOpen, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -7,39 +7,43 @@ import { useState, useEffect } from "react";
 const projects = [
   {
     id: 1,
+    title: "GetAnime – Anime Recommendation System",
+    date: "December, 2024",
+    description: "AI-powered anime recommendation system using semantic search and GenAI. Input natural language queries like 'adventure with underdog protagonist' and get personalized anime recommendations with explanations.",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+    technologies: ["Python", "Streamlit", "LangChain", "Sentence Transformers", "FAISS", "Groq LLM", "Docker", "Kubernetes"],
+    demoUrl: "https://getanime.streamlit.app/",
+    githubUrl: "https://github.com/Divyansh0108/AnimAI-Navigator",
+    mediumUrl: "https://medium.com/@divyanshpandey0108/building-your-very-own-anime-recommendation-system-6ec98298ef12",
+    icon: Zap,
+    hasDemoLink: true,
+    hasMediumLink: true,
+  },
+  {
+    id: 2,
     title: "Mental Health Predictor",
     date: "March, 2025",
     description: "AI application to predict and assess mental health status. Early detection for depression among students.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56",
     technologies: ["Python", "TensorFlow", "Streamlit", "Gemini Flash 1.5", "Matplotlib", "LIME", "scikit-learn"],
     demoUrl: "https://mentalhealth-01.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/MentalHealth",
     icon: Brain,
     hasDemoLink: true,
+    hasMediumLink: false,
   },
   {
-    id: 2,
+    id: 3,
     title: "Comprehensive Data Analysis Toolkit",
     date: "October, 2024",
     description: "Toolkit for data cleaning, feature engineering, transformation, and model building.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
     technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Plotly", "Machine Learning", "Data Cleaning", "Feature Engineering"],
     demoUrl: "https://dataviztoolkit.streamlit.app/",
     githubUrl: "https://github.com/Divyansh0108/DataAnalysisToolkit",
     icon: ChartBar,
     hasDemoLink: true,
-  },
-  {
-    id: 3,
-    title: "E2E Text Summarization",
-    date: "April, 2024",
-    description: "End-to-end text summarization with deep learning & NLP.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    technologies: ["Python", "NLP", "Transformers", "Flask", "React"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/Divyansh0108/E2E-text-summarization",
-    icon: FileText,
-    hasDemoLink: false,
+    hasMediumLink: false,
   },
 ];
 
@@ -117,7 +121,7 @@ const ProjectsSection = () => {
                     )}
                   </div>
                   <div className="flex justify-between items-center">
-                    <div className="flex space-x-2">
+                    <div className="flex flex-wrap gap-2">
                       {project.hasDemoLink && (
                         <a
                           href={project.demoUrl}
@@ -136,6 +140,16 @@ const ProjectsSection = () => {
                       >
                         <Github className="w-3.5 h-3.5 mr-1" /> GitHub
                       </a>
+                      {project.hasMediumLink && (
+                        <a
+                          href={project.mediumUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-shadow px-3 py-1.5 rounded-lg text-sm font-medium bg-transparent border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center justify-center"
+                        >
+                          <BookOpen className="w-3.5 h-3.5 mr-1" /> Blog
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
